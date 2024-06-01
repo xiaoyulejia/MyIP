@@ -18,42 +18,6 @@ export default defineConfig({
         }
       }
     }),
-    VitePWA({
-      registerType: 'autoUpdate',
-      injectRegister: 'auto',
-      workbox: {
-        globPatterns: [
-          '**/*.{js,css,html,woff,woff2}',
-          '*.{js,css,html,png,svg,jpg,webp}',
-        ]
-      },
-      manifest: {
-        name: 'IPCheck.ing',
-        short_name: 'IPCheck.ing',
-        theme_color: '#f8f9fa',
-        orientation: "portrait",
-        id: 'com.jasonng.myip',
-        description: 'All in one IP Toolbox',
-        icons: [
-          {
-            src: '/logos/logo-192.webp',
-            sizes: '192x192',
-            type: 'image/webp',
-            purpose: 'maskable'
-          },
-          {
-            src: '/logos/ios-logo-192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/logos/ios-logo-512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
-      },
-    }),
     CodeInspectorPlugin({
       bundler: 'vite',
       hideDomPathAttr: true,
